@@ -23,3 +23,4 @@ class MakeWirte(QWidget):
 	self.addtimecode = QcheckBox("&AddTimecode", self)
 	self.addtimcode.setChecked(False)
 	#startframe, starttimecode
+	self.startframe = QLimeEdit(str(int(nuke.Root()
