@@ -2,16 +2,18 @@
 version 11.3 v1
 Gizmo {
  addUserKnob {20 User}
- addUserKnob {1 vender t "print left top position"}
- vender vender
- addUserKnob {1 shotname t "print center top position"}
- shotname Foo_0010
- addUserKnob {1 username t "print left bottom position"}
- username user
+ addUserKnob {1 vendor t "print left top position"}
+ vendor vender
+ addUserKnob {1 shot t "print center top position"}
+ shot Foo_0010
+ addUserKnob {1 user t "print left bottom position"}
+ user user
  addUserKnob {1 task t "print left top position"}
  task comp
  addUserKnob {1 memo t "print center bottom position"}
  memo memo
+ addUserKnob {1 version t version}
+ version 1
 }
  Input {
   inputs 0
@@ -23,7 +25,7 @@ Gizmo {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "\[value parent.shotname]"
+  message "\[value parent.shot]"
   old_message {{70 111 111 95 48 48 49 48}
     }
   old_expression_markers {{0 7}
@@ -32,7 +34,7 @@ Gizmo {
   xjustify center
   transforms {{0 2}
     }
-  cursor_position 23
+  cursor_position 18
   font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
   global_font_scale {{"height * 0.0006"}}
   center {1024 778}
@@ -54,7 +56,7 @@ Gizmo {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "\[value parent.vender]"
+  message "\[value parent.vendor]"
   old_message {{118 101 110 100 101 114}
     }
   old_expression_markers {{0 5}
@@ -82,7 +84,7 @@ Gizmo {
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[date %y]\[date %m]\[date %d] \[date %T]"
-  old_message {{49 57 48 50 49 56 32 49 50 58 50 49 58 51 50}
+  old_message {{49 57 48 50 50 55 32 49 50 58 49 56 58 52 52}
     }
   old_expression_markers {{0 1 2 3 4 5 7 14}
     }
@@ -139,7 +141,7 @@ Gizmo {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "\[value parent.username] \[value parent.task] v\[format %03d 1]"
+  message "\[value parent.user] \[value parent.task] v\[format %03d \[value parent.version]]"
   old_message {{117 115 101 114 32 99 111 109 112 32 118 48 48 49}
     }
   old_expression_markers {{0 3 5 8 11 13}
@@ -148,7 +150,7 @@ Gizmo {
   yjustify bottom
   transforms {{0 2}
     }
-  cursor_position 43
+  cursor_position 76
   font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
   global_font_scale {{"height * 0.0006"}}
   center {1024 484}
@@ -167,7 +169,7 @@ Gizmo {
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[metadata input/timecode] \[format %06d \[frame]]"
-  old_message {{48 48 58 51 49 58 49 50 58 48 57 32 48 55 56 52 55 49}
+  old_message {{48 48 58 51 48 58 53 50 58 49 48 32 48 48 49 48 48 49}
     }
   old_expression_markers {{0 10 12 17}
     }
