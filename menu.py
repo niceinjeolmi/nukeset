@@ -4,6 +4,7 @@ import checkenv
 import openfile
 import helloworld
 import nklibrary
+import makewrite
 #import openfile_v01
 
 tb = nuke.toolbar("Nodes")
@@ -27,4 +28,5 @@ mb.addCommand("CheckEnv", "reload(checkenv);checkenv.main()")
 mb.addCommand("OpenFile", "reload(openfile);openfile.main()", "F8", shortcutContext=2)
 mb.addCommand("HelloWorld", "reload(helloworld);helloworld.main()")
 mb.addCommand("NkLibrary", "reload(nklibrary);nklibrary.main()")
+mb.addCommand("MakeWrite", "reload(makewrite);makewrite.main()", "F10", shortcutContext=2)
 #mb.addCommand("OpenFile_v01", "openfile_v01.openfile()", "F9", shortcutContext=2)
